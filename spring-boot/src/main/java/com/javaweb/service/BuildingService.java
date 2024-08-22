@@ -8,5 +8,5 @@ import com.javaweb.builder.BuildingSearchBuilder;
 
 public interface BuildingService {
 	List<BuildingDTO> findAll(Map<String, Object> ob, List<String> typeCode);
-	public boolean existsById(Long id);
+	boolean existsById(Long id);
 }
