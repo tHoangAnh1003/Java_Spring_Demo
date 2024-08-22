@@ -2,6 +2,7 @@ package com.javaweb.reponsitory.impl;
 
 import java.lang.reflect.Field;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -157,5 +158,21 @@ public class BuildingRepositoryImpl implements BuildingRepository {
 		// TODO Auto-generated method stub
 		
 	}
+	
+    public boolean existsById(Long id) {
+    	String sql = "SELECT COUNT(*) FROM building WHERE id = ?";
+        try (Connection connection = ConnectionUtil.getConnection();
+             PreparedStatement ps = connection.prepareStatement(sql)) {
+            ps.setLong(1, id);
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                    return rs.getInt(1) > 0;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 	
 }

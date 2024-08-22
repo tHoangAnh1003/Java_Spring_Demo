@@ -40,4 +40,8 @@ public class BuildingServiceImpl implements BuildingService {
 		
 		return result;
 	}
+	
+	public boolean existsById(Long id) {
+        return buildingRepository.existsById(id);
+    }
 }

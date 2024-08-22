@@ -10,4 +10,6 @@ public interface BuildingRepository {
 	void delete(Long[] ids);
 
 	List<BuildingEntity> findAll(BuildingSearchBuilder builder);
+	
+    public boolean existsById(Long id);
 }
