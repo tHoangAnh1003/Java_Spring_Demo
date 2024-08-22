@@ -33,10 +33,10 @@ public class BuildingAPI {
 	
 	
 	
-	@PostMapping(value = "/api/building")
+	@PostMapping(value = "/api/building/post")
 	public Object createBuilding(@RequestBody BuildingDTO buildingDTO) {
 		validateData(buildingDTO);
-		System.out.println("OK");
+		System.out.println("Post Successfully");
 		return buildingDTO;
 	}
 	
@@ -45,8 +45,8 @@ public class BuildingAPI {
 		
 	}
 
-	@DeleteMapping(value = "/api/building/{ids}")
+	@DeleteMapping(value = "/api/building/delete/{ids}")
 	public void deleteBuilding(@PathVariable Long[] ids) {
-		System.out.print("OK");
+		System.out.println("Delete Successfully\n");
 	}
 }
