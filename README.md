@@ -31,9 +31,9 @@
 3. **Cấu hình cổng server (tuỳ chọn):**
    - Nếu bạn muốn thay đổi cổng chạy ứng dụng, hãy mở file `application.properties` và chỉnh sửa:
      ```properties
-     server.port=8080
+     server.port=9090
      ```
-   - Thay đổi `8080` thành cổng bạn muốn sử dụng.
+   - Thay đổi `9090` thành cổng bạn muốn sử dụng.
 
 ## Chạy ứng dụng
 1. Mở Eclipse hoặc IDE bạn đang sử dụng.

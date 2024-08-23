@@ -59,7 +59,10 @@ public class BuildingAPI {
 	    boolean exists = buildingService.existsById(id);
 
 	    if (!exists) {
+	    	System.out.println("Head Fail");
 	        throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Building not found");
+	    } else {
+	    	System.out.println("Head Successfully");
 	    }
 	}
 
